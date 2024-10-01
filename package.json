@@ -1,0 +1,16 @@
+{
+  "name": "automation-test-project",
+  "version": "1.0.0",
+  "description": "This project is about testing various functionalities of the <a href=\"https://www.automationexercise.com/\"> Automation Exercise Website</a> using Cypress for automated tests, including continuous integration (CI) with GitHub Actions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "test:cmd": "npx cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.15.0"
+  }
+}
