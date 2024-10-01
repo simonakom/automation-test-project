@@ -78,6 +78,7 @@ Cypress.Commands.add('deleteAccount', () => {
 Cypress.Commands.add('registerUserAndLogout', (user) => {
     cy.registerUser(user);
     cy.get('a[href="/logout"]').contains(' Logout').click();
+    cy.get('h2').should('contain.text', 'Login to your account').and('be.visible');
 });
 
 Cypress.Commands.add('navigateToHomePageAndLogin', () => {
