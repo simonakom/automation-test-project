@@ -1,4 +1,3 @@
-
 describe('Successful registration', () => {
   let signupEmail;
 
