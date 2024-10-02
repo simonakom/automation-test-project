@@ -33,7 +33,7 @@ describe('Cart', () => {
     // Click 'Cart' button
     cy.get('a[href="/view_cart"]').first().should('contain.text', ' Cart').and('be.visible').click();
     // Verify that cart page is displayed
-    cy.url().should('eq', 'https://www.automationexercise.com/view_cart');
+    cy.url().should('eq', `${Cypress.config('baseUrl')}view_cart`);
     cy.get('li.active').should('contain.text', 'Shopping Cart').and('be.visible');
     cy.get('.cart_description').should('have.length', 2); 
     // Click 'X' button corresponding to particular product

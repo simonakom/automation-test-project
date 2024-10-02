@@ -13,9 +13,9 @@ Cypress.Commands.add('createUser', (baseName) => {
 
 Cypress.Commands.add('registerUser', (user) => {
   // Navigate to url 
-  cy.visit('https://www.automationexercise.com/');
+  cy.visit('/');
   // Verify that home page is visible successfully
-  cy.url().should('eq', 'https://www.automationexercise.com/');
+  cy.url().should('eq', Cypress.config('baseUrl'));
   cy.get('h1').should('contain.text', 'Automation').and('contain.text', 'Exercise').and('be.visible');
   // Click on 'Signup / Login' button
   cy.get('a[href="/login"]').should('contain.text', 'Signup / Login').and('be.visible').click();
@@ -75,9 +75,9 @@ Cypress.Commands.add('logout', () => {
 
 Cypress.Commands.add('navigateToHomePage', () => {
   // Navigate to url 
-  cy.visit('https://www.automationexercise.com/');
+  cy.visit('/');
   // Verify that home page is visible successfully
-  cy.url().should('eq', 'https://www.automationexercise.com/');
+  cy.url().should('eq', Cypress.config('baseUrl'));
   cy.get('h1').should('contain.text', 'Automation').and('contain.text', 'Exercise').and('be.visible');
 });
 

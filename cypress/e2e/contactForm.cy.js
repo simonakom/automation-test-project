@@ -23,5 +23,5 @@ it('Logout user', () => {
     cy.get('.contact-form .alert-success').should('contain.text', 'Success! Your details have been submitted successfully.').and('be.visible');
     // Click 'Home' button and verify that landed to home page successfully
     cy.get('.btn-success').should('contain.text', 'Home').and('be.visible').click();
-    cy.url().should('eq', 'https://www.automationexercise.com/');
-})
+    cy.url().should('eq', `${Cypress.config('baseUrl')}`);
+  })
