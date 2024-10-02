@@ -70,7 +70,7 @@ Cypress.Commands.add('logout', () => {
   // Click 'Logout' button
   cy.get('a[href="/logout"]').contains(' Logout').click();
   // Verify that user is navigated to login page
-  cy.get('h2').should('contain.text', 'Login to your account').and('be.visible');
+  cy.get('.login-form h2').should('contain.text', 'Login to your account').and('be.visible');
 });
 
 Cypress.Commands.add('navigateToHomePage', () => {
