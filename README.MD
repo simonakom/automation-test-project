@@ -34,7 +34,7 @@ Before you begin, ensure you have the following installed on your machine:
 ## <span><img src="./assets/rocket.png" alt=Prerequisites style="height: 1cm;"></span> Run Cypress
 
 - To run and open 'Cypress' user interface (GUI):  `npm run test`. 
-  - In Cypress UI choose E2E Testing in preffered browser and choose existing "spec" to run it.
+  - In Cypress UI choose E2E Testing in preffered browser and click on existing "spec" in order to run it.
 - To run Cypress tests in your terminal or command line interface (CLI): `npm run test:cmd`. 
 
 ## <span><img src="./assets/cypress.png" alt=Prerequisites style="height: 1cm;"></span> Automated tests with Cypress
