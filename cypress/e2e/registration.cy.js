@@ -1,17 +1,17 @@
-// describe('Successful registration', () => {
-//   let user;
+describe('Successful registration', () => {
+  let user;
 
-//   beforeEach(() => {
-//     cy.createUser('John').then((newUser) => { 
-//       user = newUser; //newuser: value returned by the cy.createUser() command.
-//     });
-//   });
+  beforeEach(() => {
+    cy.createUser('John').then((newUser) => { 
+      user = newUser; //newuser: value returned by the cy.createUser() command.
+    });
+  });
 
-//   it('Register user', () => {
-//     cy.registerUser(user);
-//     cy.deleteAccount();
-//   });
-// });
+  it('Register user', () => {
+    cy.registerUser(user);
+    cy.deleteAccount();
+  });
+});
 
 describe('Failed registration', () => {
   let user;
