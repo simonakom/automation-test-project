@@ -20,14 +20,14 @@ Cypress.Commands.add('registerUser', (user) => {
   // Click on 'Signup / Login' button
   cy.get('a[href="/login"]').should('contain.text', 'Signup / Login').and('be.visible').click();
   // Verify 'New User Signup!' is visible
-  cy.get('h2').should('contain.text', 'New User Signup!').and('be.visible');
+  cy.get('.signup-form h2').should('contain.text', 'New User Signup!').and('be.visible');
   // Enter name and email address
   cy.get('input[data-qa="signup-name"]').type(user.name).should('have.value', user.name).and('be.visible');
   cy.get('input[data-qa="signup-email"]').type(user.email).should('have.value', user.email).and('be.visible');
   // Click 'Signup' button
   cy.get('button[data-qa="signup-button"]').should('contain.text', 'Signup').and('be.visible').click();
   // Verify that 'ENTER ACCOUNT INFORMATION' is visible
-  cy.get('h2.title').should('contain.text', 'Enter Account Information').and('be.visible');
+  cy.get('.login-form h2').should('contain.text', 'Enter Account Information').and('be.visible');
   // Fill details: Title, Name, Email, Password, Date of birth 
   cy.get('input[type="radio"][value="Mr"]').check().should('be.checked').and('be.visible'); 
   cy.get('input[data-qa="password"]').type(user.password).should('have.value', user.password).and('be.visible');
