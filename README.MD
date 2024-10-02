@@ -56,7 +56,7 @@ To maintain clean code, and proper structure, tests were split into 5 files:
 This project includes a GitHub Actions workflow that automatically runs the Cypress tests each time the main branch is updated.
 
 ### GitHub Actions Workflow
-The CI process is defined in the `.github/workflows/main.yml file`.
+The CI process is defined in the `.github/workflows/main.yml` file.
 
 ### How to View Test Results
 Test results can be viewed in the "Actions" tab of your GitHub repository. Each workflow run will show the logs of the test execution, including any failures or errors encountered during the test runs.
