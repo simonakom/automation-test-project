@@ -2,7 +2,7 @@
 
 ## Welcome!
 
-This project is about testing various functionalities of the <a href="https://www.automationexercise.com/"> Automation Exercise Website</a> using Cypress for automated tests, including continuous integration (CI) with GitHub Actions.
+This project focuses on testing different functionalities of the <a href="https://www.automationexercise.com/"> Automation Exercise Website</a> through automated tests using Cypress. Additionally, the project includes continuous integration (CI) with GitHub Actions.
 
 Following 10 test cases were seleceted from the Automation Exercise <a href="https://www.automationexercise.com/test_cases">website</a> and implementent in this project:
 
