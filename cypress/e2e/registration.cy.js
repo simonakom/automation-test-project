@@ -2,8 +2,8 @@ describe('Successful registration', () => {
   let user;
 
   beforeEach(() => {
-    cy.createUser('John').then((newUser) => { //newuser: value returned by the cy.createUser() command.
-      user = newUser;  
+    cy.createUser('John').then((newUser) => { 
+      user = newUser; //newuser: value returned by the cy.createUser() command.
     });
   });
 
@@ -13,19 +13,21 @@ describe('Successful registration', () => {
   });
 });
 
-
 describe('Failed registration', () => {
   let user;
 
   beforeEach(() => {
     cy.createUser('Roger').then((newUser) => {
       user = newUser;  
-      cy.registerUserAndLogout(user);
+      cy.registerUser(user);
+      cy.logout();
     });
   });
 
   it('Register user with existing email', () => {
-    cy.navigateToHomePageAndLogin();
+    cy.navigateToHomePage();
+    // Click on 'Signup / Login' button
+    cy.get('a[href="/login"]').should('contain.text', 'Signup / Login').and('be.visible').click();
     // Verify 'New User Signup!' is visible
     cy.get('h2').should('contain.text', 'New User Signup!').and('be.visible');
     // Enter name and already registered email address

@@ -4,12 +4,15 @@ describe('Successful login', () => {
   beforeEach(() => {
     cy.createUser('Tom').then((newUser) => {
       user = newUser;
-      cy.registerUserAndLogout(user);
+      cy.registerUser(user);
+      cy.logout();
     });
   });
 
   it('Login user with correct email and password', () => {  
-  cy.navigateToHomePageAndLogin();
+  cy.navigateToHomePage();
+  // Click on 'Signup / Login' button
+  cy.get('a[href="/login"]').should('contain.text', 'Signup / Login').and('be.visible').click();
   // Verify 'Login to your account' is visible
   cy.get('h2').should('contain.text', 'Login to your account').and('be.visible');
   // Enter correct email address and password
@@ -18,7 +21,7 @@ describe('Successful login', () => {
   // Click 'login' button
   cy.get('button[data-qa="login-button"]').should('contain.text', 'Login').and('be.visible').click();
   // Verify that 'Logged in as username' is visible
-  cy.get('.shop-menu .nav li').should('contain.text', `Logged in as ${user.firstName}`).and('be.visible');
+  cy.get('.shop-menu .nav li:contains("Logged in as")').should('contain.text', `Logged in as ${user.firstName}`).and('be.visible');
   cy.deleteAccount();
   })
 });
@@ -27,14 +30,14 @@ describe('Failed login', () => {
   let user;
 
   beforeEach(() => {
-    cy.createUser('Roger').then((newUser) => {
+    cy.createUser('Mike').then((newUser) => {
       user = newUser;
-      cy.registerUserAndLogout(user);
+      cy.registerUser(user);
+      cy.logout();
     });
   });
 
   it('Login User with incorrect email and password', () => {
-
    cy.navigateToHomePageAndLogin();
    // Verify 'Login to your account' is visible
    cy.get('h2').should('contain.text', 'Login to your account').and('be.visible');

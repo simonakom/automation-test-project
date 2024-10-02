@@ -64,8 +64,7 @@ Cypress.Commands.add('registerUser', (user) => {
   // Click 'Continue' button
   cy.get('a[data-qa="continue-button"]').should('contain.text', 'Continue').and('be.visible').click();
   // Verify that 'Logged in as username' is visible
-  cy.get('.shop-menu .nav li').should('contain.text', `Logged in as ${user.firstName}`).and('be.visible');
-})
+  cy.get('.shop-menu .nav li:contains("Logged in as")').should('contain.text', `Logged in as ${user.firstName}`).and('be.visible');})
 
 Cypress.Commands.add('deleteAccount', () => {
   // Click 'Delete Account' button
@@ -75,19 +74,35 @@ Cypress.Commands.add('deleteAccount', () => {
   cy.get('a[data-qa="continue-button"]').should('contain.text', 'Continue').and('be.visible').click();
 });
 
-Cypress.Commands.add('registerUserAndLogout', (user) => {
-    cy.registerUser(user);
-    cy.get('a[href="/logout"]').contains(' Logout').click();
-    cy.get('h2').should('contain.text', 'Login to your account').and('be.visible');
+Cypress.Commands.add('logout', () => {
+  // Click 'Logout' button
+  cy.get('a[href="/logout"]').contains(' Logout').click();
+  // Verify that user is navigated to login page
+  cy.get('h2').should('contain.text', 'Login to your account').and('be.visible');
 });
 
-Cypress.Commands.add('navigateToHomePageAndLogin', () => {
-    // Navigate to url 
-    cy.visit('https://www.automationexercise.com/');
-    // Verify that home page is visible successfully
-    cy.url().should('eq', 'https://www.automationexercise.com/');
-    cy.get('h1').should('contain.text', 'Automation').and('contain.text', 'Exercise').and('be.visible');
-    // Click on 'Signup / Login' button
-    cy.get('a[href="/login"]').should('contain.text', 'Signup / Login').and('be.visible').click();
+Cypress.Commands.add('navigateToHomePage', () => {
+  // Navigate to url 
+  cy.visit('https://www.automationexercise.com/');
+  // Verify that home page is visible successfully
+  cy.url().should('eq', 'https://www.automationexercise.com/');
+  cy.get('h1').should('contain.text', 'Automation').and('contain.text', 'Exercise').and('be.visible');
 });
 
+Cypress.Commands.add('addProductToCart', (productId) => {
+  // Hover over first product and click 'Add to cart'
+  cy.get(`a[data-product-id="${productId}"]`).first().contains('Add to cart').trigger('mouseover'); 
+  cy.get(`a[data-product-id="${productId}"]`).first().contains('Add to cart').click(); 
+});
+
+Cypress.Commands.add('subscribeToNewsletter', (email) => {
+  // Scroll down to footer
+  cy.get('footer').scrollIntoView();
+  // Verify text 'SUBSCRIPTION'
+  cy.get('.single-widget h2').should('contain.text', 'Subscription').and('be.visible');
+  // Enter email address in input and click arrow button
+  cy.get('input[type="email"]#susbscribe_email').should('be.visible').type('test@example.com'); 
+  cy.get('button#subscribe').should('be.visible').click(); 
+  // Verify success message 'You have been successfully subscribed!' is visible 
+  cy.get('#success-subscribe').should('be.visible').and('contain.text', 'You have been successfully subscribed!');
+});
