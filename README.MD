@@ -1,4 +1,4 @@
-# <span><img src="./assets/logo.png" alt=logo style="height: 2em;"></span> *Automation Exercise* - Automated Testing with Cypress
+# <span><img src="./assets/logo.png" alt=logo style="height: 2em;"></span> - Automated Testing with Cypress
 
 This project is about testing various functionalities of the <a href="https://www.automationexercise.com/"> Automation Exercise Website</a> using Cypress for automated tests, including continuous integration (CI) with GitHub Actions.
 
