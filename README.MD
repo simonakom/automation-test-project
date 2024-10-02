@@ -1,9 +1,18 @@
-# Automation Exercise Website - Automated Testing with Cypress
- 
+# <span><img src="./assets/logo.png" alt=clogo style="height: 1em;"></span> Automation Exercise Website - Automated Testing with Cypress
+
 This project is about testing various functionalities of the <a href="https://www.automationexercise.com/"> Automation Exercise Website</a> using Cypress for automated tests, including continuous integration (CI) with GitHub Actions.
 
-The test cases selected from the "Automation Exercise" website are implemented with Cypress and organized into logical test structures. The tests cover scenarios like user authentication, product searches, adding to cart, and more.
+Following test cases were seleceted from the Automation Exercise <a href="https://www.automationexercise.com/test_cases">website</a> and implementent in this project:
 
+- Test Case 1: Register User
+- Test Case 2: Login User with correct email and password
+- Test Case 3: Login User with incorrect email and password
+- Test Case 4: Logout User
+- Test Case 5: Register User with existing email
+- Test Case 12: Add Products in Cart
+- Test Case 17: Remove Products From Cart
+- Test Case 10: Verify Subscription in home page
+- Test Case 11: Verify Subscription in Cart page
 
 ## Prerequisites
 
@@ -21,21 +30,28 @@ Before you begin, ensure you have the following installed on your machine:
 ## Run Cypress
 
 - To run and open 'Cypress' user interface (GUI):  `npm run test`. 
-  - In Cypress UI choose E2E Testing in preffered browser and choose existing "spec": `spec.cy.js`.
+  - In Cypress UI choose E2E Testing in preffered browser and choose existing "spec" to run it.
 - To run Cypress tests in your terminal or command line interface (CLI): `npm run test:cmd`. 
 
 ## Automated tests with Cypress
 
-- Tests can be found: `cypress/e2e/spec.cy.js` (Tests with errors are commented).
+- Tests can be found: `cypress/e2e`
 - Commands can be found: `cypress/support/commands.js`.
 
 
-## CI/CD Integration with GitHub Actions
+To maintain clean code, and proper structure, tests were split into 5 files:
+- `registration.cy.js` - include test case 1 & 5
+- `login.cy.js` -  include test case 2 & 3
+- `logout.cy.js` - include test case 4
+- `cart.cy.js` - include test case 12 & 17
+- `subscription.cy.js` - include test case 10 % 11
+
+## CI Integration with GitHub Actions
 
 This project includes a GitHub Actions workflow that automatically runs the Cypress tests each time the main branch is updated.
 
 ### GitHub Actions Workflow
-The CI/CD process is defined in the .github/workflows/main.yml file.
+The CI process is defined in the `.github/workflows/main.yml file`.
 
 ### How to View Test Results
 Test results can be viewed in the "Actions" tab of your GitHub repository. Each workflow run will show the logs of the test execution, including any failures or errors encountered during the test runs.
