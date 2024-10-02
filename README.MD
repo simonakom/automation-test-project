@@ -2,13 +2,14 @@
 
 This project is about testing various functionalities of the <a href="https://www.automationexercise.com/"> Automation Exercise Website</a> using Cypress for automated tests, including continuous integration (CI) with GitHub Actions.
 
-Following test cases were seleceted from the Automation Exercise <a href="https://www.automationexercise.com/test_cases">website</a> and implementent in this project:
+Following 10 test cases were seleceted from the Automation Exercise <a href="https://www.automationexercise.com/test_cases">website</a> and implementent in this project:
 
 - Test Case 1: Register User
 - Test Case 2: Login User with correct email and password
 - Test Case 3: Login User with incorrect email and password
 - Test Case 4: Logout User
 - Test Case 5: Register User with existing email
+- Test Case 6: Contact Us Form
 - Test Case 12: Add Products in Cart
 - Test Case 17: Remove Products From Cart
 - Test Case 10: Verify Subscription in home page
@@ -47,6 +48,7 @@ To maintain clean code, and proper structure, tests were split into 5 files:
 - `logout.cy.js` - include test case 4
 - `cart.cy.js` - include test case 12 & 17
 - `subscription.cy.js` - include test case 10 % 11
+- `contactFrom.cy.js` - include test case 6
 
 ## <span><img src="./assets/github.png" alt=Prerequisites style="height: 1em;"></span> CI Integration with GitHub Actions
 
