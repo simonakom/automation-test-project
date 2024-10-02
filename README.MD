@@ -23,8 +23,7 @@ Following 10 test cases were seleceted from the Automation Exercise <a href="htt
 Before you begin, ensure you have the following installed on your machine:
 
 - Node.js.
-- npm (Node Package Manager): Comes with Node.js installation.
-
+- npm (Node Package Manager): *Comes with Node.js installation.*
 
 ## <span><img src="./assets/setting.png" alt=Prerequisites style="height: 1cm;"></span> Set up 
 
