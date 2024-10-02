@@ -37,7 +37,7 @@ describe('Failed login', () => {
     });
   });
 
-  it('Login User with incorrect email and password', () => {
+  it('Login user with incorrect email and password', () => {
     cy.navigateToHomePage();
     // Click on 'Signup / Login' button
     cy.get('a[href="/login"]').should('contain.text', 'Signup / Login').and('be.visible').click();

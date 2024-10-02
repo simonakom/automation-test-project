@@ -1,6 +1,6 @@
 describe('Cart', () => {
 
-  it('Add Products in Cart', () => {
+  it('Add products in cart', () => {
     cy.navigateToHomePage();
     // Click 'Products' button
     cy.get('a[href="/products"]').should('contain.text', ' Products').and('be.visible').click();
@@ -23,7 +23,7 @@ describe('Cart', () => {
     cy.get('.cart_total').eq(1).should('contain.text', 'Rs. 400'); 
   })
 
-  it('Remove Products From Cart', () => {
+  it('Remove products from cart', () => {
     cy.navigateToHomePage();
     // Add products to cart
     cy.addProductToCart(1);

@@ -7,7 +7,7 @@ describe('Successful registration', () => {
     });
   });
 
-  it('Register User', () => {
+  it('Register user', () => {
     cy.registerUser(user);
     cy.deleteAccount();
   });
