@@ -3,13 +3,14 @@ describe('Successful login', () => {
 
   beforeEach(() => {
     cy.createUser('Tom').then((newUser) => {
-      user = newUser;
+      user = newUser; //newuser: value returned by the cy.createUser() command.
       cy.registerUser(user);
       cy.logout();
     });
   });
 
   it('Login user with correct email and password', () => {  
+    // Navigate to url & verify that home page is visible successfully
     cy.navigateToHomePage();
     // Click on 'Signup / Login' button
     cy.get('a[href="/login"]').should('contain.text', 'Signup / Login').and('be.visible').click();
@@ -38,6 +39,7 @@ describe('Failed login', () => {
   });
 
   it('Login user with incorrect email and password', () => {
+    // Navigate to url & verify that home page is visible successfully
     cy.navigateToHomePage();
     // Click on 'Signup / Login' button
     cy.get('a[href="/login"]').should('contain.text', 'Signup / Login').and('be.visible').click();

@@ -1,6 +1,7 @@
 describe('Cart', () => {
 
   it('Add products in cart', () => {
+    // Navigate to url & verify that home page is visible successfully
     cy.navigateToHomePage();
     // Click 'Products' button
     cy.get('a[href="/products"]').should('contain.text', ' Products').and('be.visible').click();
@@ -24,6 +25,7 @@ describe('Cart', () => {
   })
 
   it('Remove products from cart', () => {
+    // Navigate to url & verify that home page is visible successfully
     cy.navigateToHomePage();
     // Add products to cart
     cy.addProductToCart(1);

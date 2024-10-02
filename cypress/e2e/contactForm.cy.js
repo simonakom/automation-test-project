@@ -1,5 +1,5 @@
 it('Logout user', () => {
-    // Navigate to url & Verify that home page is visible successfully
+    // Navigate to url & verify that home page is visible successfully
     cy.navigateToHomePage();
     // Click on 'Contact Us' button
     cy.get('a[href="/contact_us"]').should('contain.text', ' Contact us').and('be.visible').click();

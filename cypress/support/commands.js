@@ -82,7 +82,7 @@ Cypress.Commands.add('navigateToHomePage', () => {
 });
 
 Cypress.Commands.add('addProductToCart', (productId) => {
-  // Hover over first product and click 'Add to cart'
+  // Hover over product and click 'Add to cart'
   cy.get(`a[data-product-id="${productId}"]`).first().contains('Add to cart').trigger('mouseover'); 
   cy.get(`a[data-product-id="${productId}"]`).first().contains('Add to cart').click(); 
 });
