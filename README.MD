@@ -16,7 +16,7 @@ Following 10 test cases were seleceted from the Automation Exercise <a href="htt
 - Test Case 11: Verify Subscription in Cart page
 
 
-## <span><img src="./assets/warning.png" alt=Prerequisites style="height: 1.3em;"></span> Prerequisites
+## <span><img src="./assets/warning.png" alt=Prerequisites style="height: 1cm;"></span> Prerequisites
 
 Before you begin, ensure you have the following installed on your machine:
 
@@ -24,19 +24,19 @@ Before you begin, ensure you have the following installed on your machine:
 - npm (Node Package Manager): Comes with Node.js installation.
 
 
-## <span><img src="./assets/setting.png" alt=Prerequisites style="height: 1.3em;"></span> Set up 
+## <span><img src="./assets/setting.png" alt=Prerequisites style="height: 1cm;"></span> Set up 
 
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
 3. Install dependencies: `npm install`.
 
-## <span><img src="./assets/rocket.png" alt=Prerequisites style="height: 1.3em;"></span> Run Cypress
+## <span><img src="./assets/rocket.png" alt=Prerequisites style="height: 1cm;"></span> Run Cypress
 
 - To run and open 'Cypress' user interface (GUI):  `npm run test`. 
   - In Cypress UI choose E2E Testing in preffered browser and choose existing "spec" to run it.
 - To run Cypress tests in your terminal or command line interface (CLI): `npm run test:cmd`. 
 
-## <span><img src="./assets/cypress.png" alt=Prerequisites style="height: 1.3em;"></span> Automated tests with Cypress
+## <span><img src="./assets/cypress.png" alt=Prerequisites style="height: 1cm;"></span> Automated tests with Cypress
 
 - Tests can be found: `cypress/e2e`
 - Commands can be found: `cypress/support/commands.js`.
@@ -50,7 +50,7 @@ To maintain clean code, and proper structure, tests were split into 5 files:
 - `subscription.cy.js` - include test case 10 % 11
 - `contactFrom.cy.js` - include test case 6
 
-## <span><img src="./assets/github.png" alt=Prerequisites style="height: 1.3em;"></span> CI Integration with GitHub Actions
+## <span><img src="./assets/github.png" alt=Prerequisites style="height: 1cm;"></span> CI Integration with GitHub Actions
 
 This project includes a GitHub Actions workflow that automatically runs the Cypress tests each time the main branch is updated.
 
