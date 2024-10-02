@@ -48,7 +48,7 @@ To maintain clean code, and proper structure, tests were split into 5 files:
 - `login.cy.js` -  include test case 2 & 3
 - `logout.cy.js` - include test case 4
 - `cart.cy.js` - include test case 12 & 17
-- `subscription.cy.js` - include test case 10 % 11
+- `subscription.cy.js` - include test case 10 & 11
 - `contactFrom.cy.js` - include test case 6
 
 ## <span><img src="./assets/github.png" alt=Prerequisites style="height: 1cm;"></span> CI Integration with GitHub Actions
