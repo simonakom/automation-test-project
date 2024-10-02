@@ -1,24 +1,16 @@
 Cypress.Commands.add('createUser', (baseName) => {
   const timestamp = Date.now();
-  return {
-    name: `${baseName}_${timestamp}`,
-    email: `${baseName.toLowerCase()}_${timestamp}@example.com`,
-    password: 'SecurePassword123',
-    birthDay: '15',
-    birthMonth: '12',
-    birthYear: '1990',
-    firstName: `${baseName}_${timestamp}`,
-    lastName: 'Doe',
-    company: 'Example Co.',
-    address: '123 Example St.',
-    address2: 'Apt 4B',
-    country: 'United States',
-    state: 'California',
-    city: 'Los Angeles',
-    zipcode: '90001',
-    mobileNumber: '1234567890',
-  };
+
+  return cy.fixture('users').then((userData) => {
+    return {
+      name: `${baseName}_${timestamp}`,
+      email: `${baseName.toLowerCase()}_${timestamp}@example.com`,
+      firstName: `${baseName}_${timestamp}`,
+      ...userData 
+    };
+  });
 });
+
 Cypress.Commands.add('registerUser', (user) => {
   // Navigate to url 
   cy.visit('https://www.automationexercise.com/');
