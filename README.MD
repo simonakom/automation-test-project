@@ -1,5 +1,5 @@
 # <span><img src="./assets/logo.png" alt=logo style="height: 2em;"></span> Automated Testing with Cypress
-
+ 
 ## Welcome!
 
 This project focuses on testing different functionalities of the <a href="https://www.automationexercise.com/"> Automation Exercise Website</a> through automated tests using Cypress. Additionally, the project includes continuous integration (CI) with GitHub Actions.
