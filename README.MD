@@ -1,4 +1,4 @@
-# <span><img src="./assets/logo.png" alt=logo style="height: 2em;"></span> Automated Testing with Cypress
+# <span><img src="./assets/logo.png" alt=logo style="height: 1em;"></span> Automated Testing with Cypress
  
 ## Welcome!
 
